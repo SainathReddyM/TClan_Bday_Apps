@@ -1,0 +1,13 @@
+.light-theme {
+    .mat-card {
+        border: 1px solid $primary-contrast;
+    }
+}
+
+.dark-theme {
+    .mat-card {
+        border: 1px solid $primary-contrast;
+        background: $dark-bg !important;
+        color: $dark-text !important;
+    }
+}

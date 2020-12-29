@@ -1,0 +1,16 @@
+.dark-theme {
+
+    ::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+
+    mat-form-field:not(.mat-focused) {
+        .mat-form-field-outline, .mat-form-field-label {
+            color: #898A8C;
+        }
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+        border-radius: 2px;
+    }
+}

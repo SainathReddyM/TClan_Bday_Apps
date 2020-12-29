@@ -1,0 +1,25 @@
+.light-theme {
+    mat-accordion {
+        mat-expansion-panel {
+            border: 1px solid $primary-contrast;
+        }
+    }
+}
+
+.dark-theme {
+    mat-accordion {
+        mat-expansion-panel {
+            background-color: $dark-bg !important;
+            border: 1px solid $primary-contrast;
+            color: $dark-text !important;
+
+            mat-expansion-panel-header {
+                background-color: inherit !important;
+
+                .mat-expansion-indicator::after {
+                    color: inherit !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.employeeCrud {
+    display: flex;
+    flex-direction: column;
+
+    mat-icon {
+        margin-bottom: 1em;
+        cursor: pointer;
+    }
+
+    &__form {
+        mat-form-field {
+            width: 100%;
+        }
+    }
+
+
+    button {
+        margin-top: 2em;
+        cursor: pointer;
+    }
+}

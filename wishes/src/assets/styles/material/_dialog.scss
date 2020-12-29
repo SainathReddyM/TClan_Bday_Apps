@@ -1,0 +1,16 @@
+.employeeDialog > .mat-dialog-container {
+    border-top: 2px solid $primary-contrast;
+
+    textarea.mat-input-element {
+        resize: none;
+        height: 7em;
+    }
+}
+
+.dark-theme {
+    .employeeDialog > .mat-dialog-container {
+        background: $dark-bg;
+        color: $dark-text;
+        border-top: 2px solid $primary-contrast;
+    }
+}

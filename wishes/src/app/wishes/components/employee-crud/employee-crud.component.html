@@ -1,0 +1,56 @@
+<div class="employeeCrud">
+
+    <mat-icon mat-dialog-close aria-hidden="false" aria-label="close icon">close</mat-icon>
+
+    <div class="employeeCrud__form">
+
+        <mat-form-field appearance="outline" *ngIf="data.type !== 'add'">
+            <mat-label>Employee Email</mat-label>
+            <input type="text" matInput [formControl]="mailSearch" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="setSearchData()">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add' || isMailSet">
+            <mat-label>First Name</mat-label>
+            <input matInput [(ngModel)]="firstName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add' || isMailSet">
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="lastName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add' || isMailSet">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput type="date" [(ngModel)]="dob">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add' || isMailSet">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput type="date" [(ngModel)]="doj">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add'">
+            <mat-label>Email ID</mat-label>
+            <input type="email" matInput [(ngModel)]="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" *ngIf="data.type === 'add' || isMailSet">
+            <mat-label>Role</mat-label>
+            <mat-select [(value)]="userRole">
+                <mat-option *ngFor="let role of roles" [value]="role">
+                    {{role | titlecase}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <button class="primary-btn" *ngIf="data.type === 'add' || isMailSet || data.type === 'delete'"
+        (click)="submitData()">
+        {{btnTexts[data.type]}}
+    </button>
+</div>

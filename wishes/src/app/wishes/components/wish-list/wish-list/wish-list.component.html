@@ -1,0 +1,19 @@
+<div class="wishList">
+    <mat-accordion multi>
+        <mat-expansion-panel *ngFor="let date of eventDates">
+            <mat-expansion-panel-header>
+                {{date | date: 'dd/MM/YYYY'}}
+            </mat-expansion-panel-header>
+
+            <ng-container *ngFor="let occasion of events[date]">
+                <mat-card (click)="openTestimonial(occasion)">
+                    <mat-card-content>
+                        <p>Event: {{eventType[occasion.eventType]}}</p>
+                        <p>Name: {{occasion.employee.firstName + ' ' + occasion.employee.lastName}}</p>
+                    </mat-card-content>
+                </mat-card>
+            </ng-container>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

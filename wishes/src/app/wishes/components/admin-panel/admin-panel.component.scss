@@ -1,0 +1,13 @@
+.adminPanel {
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="enterWish">
+    <mat-icon mat-dialog-close aria-hidden="false" aria-label="close icon">close</mat-icon>
+    <div class="wishContent" *ngIf="displayMsg">
+        <p>Name: {{event.employee.firstName + ' ' + event.employee.lastName}}</p>
+        <p>Event: {{eventType[event.eventType]}}</p>
+        <p>Date: {{event.eventDate | date: 'dd/MM/YYYY'}}</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Testimonial</mat-label>
+            <textarea maxlength="160" matInput [(ngModel)]="message"></textarea>
+        </mat-form-field>
+        <div class="wishBtn">
+            <button (click)="DeleteMsg()">Delete</button>
+            <button class="primary-btn" (click)="postMsg()">Submit</button>
+        </div>
+    </div>
+</div>

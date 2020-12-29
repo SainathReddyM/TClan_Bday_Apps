@@ -1,0 +1,11 @@
+.dark-theme {
+    mat-select {
+        span {
+            color: $dark-text;
+        }
+
+        .mat-select-arrow {
+            color: $dark-text;
+        }
+    }
+}

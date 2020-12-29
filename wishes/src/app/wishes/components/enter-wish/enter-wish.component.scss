@@ -1,0 +1,37 @@
+@import '../../../../styles.scss';
+
+.enterWish {
+    height: 100%;
+
+    mat-icon {
+        margin-bottom: 2em;
+        cursor: pointer;
+    }
+
+    .wishContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 70%;
+        align-items: center;
+
+        p {
+            width: 100%;
+        }
+
+        mat-form-field {
+            width: 100%;
+            margin-top: 2em;
+        }
+
+        .wishBtn {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            button {
+                cursor: pointer;
+            }
+        }
+    }
+}

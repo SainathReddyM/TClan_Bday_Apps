@@ -1,0 +1,16 @@
+.wishList {
+    width: 90%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    mat-expansion-panel {
+        margin: 2em 0;
+
+        mat-card {
+            margin: 1em 0;
+            cursor: pointer;
+        }
+    }
+
+}
