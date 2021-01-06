@@ -133,11 +133,13 @@ def generateCard(eventType, firstName, topFiveWishes):
 def pickBlankCard(eventType):
     if(eventType == "WORK_ANNIVERSARY"):
         blankCardsList = os.listdir(properties.work_anniversary_blank_cards)
+        print(blankCardsList)
         blankCardsList.remove('.DS_Store')
         blankCard = random.choice(blankCardsList)
         return properties.work_anniversary_blank_cards+blankCard
     else:
         blankCardsList = os.listdir(properties.birthday_blank_cards)
+        print(blankCardsList)
         blankCardsList.remove('.DS_Store')
         blankCard = random.choice(blankCardsList)
         return properties.birthday_blank_cards+blankCard
